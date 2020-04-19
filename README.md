@@ -1,13 +1,11 @@
-# ST
+# KANPA
 
 JSON Selector + Transformer
 
-- Website: [https://selecttransform.github.io/site](https://selecttransform.github.io/site)
-- Twitter: [@selecttransform](https://www.twitter.com/selecttransform)
+- Website: [https://kanpa.github.io/site](https://kanpa.github.io/site)
+- Twitter: [@kanpa](https://www.twitter.com/kanpa)
 
 ---
-
-![preview](https://gliechtenstein.github.io/images/st.gif)
 
 1. **Select:** Query any JSON tree to select exactly the subtree you are looking for.
 2. **Transform:** Transform any JSON object to another by parsing with a template, also written in JSON
@@ -37,7 +35,7 @@ var data = {
 > Step 2. Find all key/value pairs that match a selector function
 
 ```js
-var sel = ST.select(data, function(key, val) {
+var sel = kanpa.select(data, function(key, val) {
   return /https?:/.test(val);
 })
 ```
@@ -98,7 +96,7 @@ var data = {
 > Step 2. Select and transform with a template JSON object
 
 ```js
-var sel = ST.select(data, function(key, val){
+var sel = kanpa.select(data, function(key, val){
             return key === 'sites';
           })
           .transformWith({
@@ -167,7 +165,7 @@ var root = sel.root();
 ```js
 <script src="st.js"></script>
 <script>
-var parsed = ST.select({ "items": [1,2,3,4] })
+var parsed = kanpa.select({ "items": [1,2,3,4] })
                 .transformWith({
                   "{{#each items}}": {
                     "type": "label", "text": "{{this}}"
@@ -188,9 +186,9 @@ $ npm install stjs
 > Use
 
 ```js
-const ST = require('st');
+const kanpa = require('kanpa');
 
-const parsed = ST.select({ "items": [1,2,3,4] })
+const parsed = kanpa.select({ "items": [1,2,3,4] })
                 .transformWith({
                   "{{#each items}}": {
                     "type": "label", "text": "{{this}}"
@@ -199,4 +197,4 @@ const parsed = ST.select({ "items": [1,2,3,4] })
                 .root();
 ```
 
-### Learn more at [selecttransform.github.io/site](https://selecttransform.github.io/site)
+### Learn more at [kanpa.github.io/site](https://kanpa.github.io/site)
