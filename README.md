@@ -180,7 +180,7 @@ var parsed = kanpa.select({ "items": [1,2,3,4] })
 > Install through npm:
 
 ```bash
-$ npm install stjs
+$ npm install kanpa
 ```
 
 > Use
