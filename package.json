@@ -6,8 +6,10 @@
   "scripts": {
     "test": "mocha"
   },
-  "publishConfig": {
-    "access": "public"
+  "np": {
+    "publishConfig": {
+      "access": "public"
+    }
   },
   "author": "",
   "license": "ISC",
